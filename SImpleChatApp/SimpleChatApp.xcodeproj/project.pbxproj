@@ -17,6 +17,7 @@
 		3F6F4DD9240E234600E3BD8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F4DD8240E234600E3BD8E /* LoginViewController.swift */; };
 		3F6F4DDB240E236C00E3BD8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F4DDA240E236C00E3BD8E /* ChatViewController.swift */; };
 		3F6F4DDF240ECCEC00E3BD8E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F4DDE240ECCEC00E3BD8E /* WelcomeViewController.swift */; };
+		3F6F4DE1240F9BEE00E3BD8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F4DE0240F9BEE00E3BD8E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		3F6F4DD8240E234600E3BD8E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F6F4DDA240E236C00E3BD8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3F6F4DDE240ECCEC00E3BD8E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		3F6F4DE0240F9BEE00E3BD8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D48A62BE9BED84659639781 /* Pods-SimpleChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E42B6744B46A5AF19FFEA765 /* Pods_SimpleChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EFD2CF1CDD012F113DC24A /* Pods-SimpleChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				3F6F4DC8240E207A00E3BD8E /* Assets.xcassets */,
 				3F6F4DCA240E207A00E3BD8E /* LaunchScreen.storyboard */,
 				3F6F4DCD240E207A00E3BD8E /* Info.plist */,
+				3F6F4DE0240F9BEE00E3BD8E /* GoogleService-Info.plist */,
 			);
 			path = SimpleChatApp;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6F4DCC240E207A00E3BD8E /* LaunchScreen.storyboard in Resources */,
+				3F6F4DE1240F9BEE00E3BD8E /* GoogleService-Info.plist in Resources */,
 				3F6F4DC9240E207A00E3BD8E /* Assets.xcassets in Resources */,
 				3F6F4DC7240E207700E3BD8E /* Main.storyboard in Resources */,
 			);
@@ -396,7 +400,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.junmohan.SimpleChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "-";
 				PRODUCT_NAME = SimpleChatApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -415,7 +419,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.junmohan.SimpleChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "-";
 				PRODUCT_NAME = SimpleChatApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

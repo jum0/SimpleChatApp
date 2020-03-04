@@ -112,12 +112,15 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" name="BrandPink"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="gRi-1t-aCc" eventType="touchUpInside" id="USz-6R-WKf"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8f4-Kg-4dK" userLabel="Password Textfield">
                                         <rect key="frame" x="48" y="50" width="318" height="45"/>
                                         <color key="textColor" name="BrandPink"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -150,6 +153,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="78v-oo-L3i"/>
                     <connections>
+                        <outlet property="emailTextfield" destination="OTo-An-1AC" id="AH8-Md-rE2"/>
+                        <outlet property="passwordTextfield" destination="8f4-Kg-4dK" id="MyE-CZ-Bma"/>
                         <segue destination="K0t-ph-e18" kind="show" identifier="RegisterToChat" id="jgu-DC-81G"/>
                     </connections>
                 </viewController>
@@ -207,7 +212,7 @@
                                         <rect key="frame" x="48" y="50" width="318" height="45"/>
                                         <color key="textColor" name="BrandPink"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -354,6 +359,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jgu-DC-81G"/>
+        <segue reference="V1b-qh-WcN"/>
     </inferredMetricsTieBreakers>
 </document>
