@@ -18,6 +18,8 @@
 		3F6F4DDB240E236C00E3BD8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F4DDA240E236C00E3BD8E /* ChatViewController.swift */; };
 		3F6F4DDF240ECCEC00E3BD8E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F4DDE240ECCEC00E3BD8E /* WelcomeViewController.swift */; };
 		3F6F4DE1240F9BEE00E3BD8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F4DE0240F9BEE00E3BD8E /* GoogleService-Info.plist */; };
+		3F8EF7B224127D8400B52122 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8EF7B124127D8400B52122 /* Constants.swift */; };
+		3F8EF7B424127FB100B52122 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8EF7B324127FB100B52122 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		3F6F4DDA240E236C00E3BD8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3F6F4DDE240ECCEC00E3BD8E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3F6F4DE0240F9BEE00E3BD8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F8EF7B124127D8400B52122 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3F8EF7B324127FB100B52122 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9D48A62BE9BED84659639781 /* Pods-SimpleChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E42B6744B46A5AF19FFEA765 /* Pods_SimpleChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EFD2CF1CDD012F113DC24A /* Pods-SimpleChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				3F6F4DCA240E207A00E3BD8E /* LaunchScreen.storyboard */,
 				3F6F4DCD240E207A00E3BD8E /* Info.plist */,
 				3F6F4DE0240F9BEE00E3BD8E /* GoogleService-Info.plist */,
+				3F8EF7B124127D8400B52122 /* Constants.swift */,
 			);
 			path = SimpleChatApp;
 			sourceTree = "<group>";
@@ -87,10 +92,10 @@
 		3F6F4DD5240E212100E3BD8E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F6F4DDE240ECCEC00E3BD8E /* WelcomeViewController.swift */,
 				3F6F4DD6240E22C900E3BD8E /* RegisterViewController.swift */,
 				3F6F4DD8240E234600E3BD8E /* LoginViewController.swift */,
 				3F6F4DDA240E236C00E3BD8E /* ChatViewController.swift */,
-				3F6F4DDE240ECCEC00E3BD8E /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 		3F6F4DDD240E2BAE00E3BD8E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3F8EF7B324127FB100B52122 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +253,8 @@
 				3F6F4DC2240E207700E3BD8E /* SceneDelegate.swift in Sources */,
 				3F6F4DD9240E234600E3BD8E /* LoginViewController.swift in Sources */,
 				3F6F4DDF240ECCEC00E3BD8E /* WelcomeViewController.swift in Sources */,
+				3F8EF7B224127D8400B52122 /* Constants.swift in Sources */,
+				3F8EF7B424127FB100B52122 /* Message.swift in Sources */,
 				3F6F4DDB240E236C00E3BD8E /* ChatViewController.swift in Sources */,
 				3F6F4DD7240E22C900E3BD8E /* RegisterViewController.swift in Sources */,
 			);
