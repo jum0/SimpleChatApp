@@ -22,16 +22,29 @@
 
 <img src="https://user-images.githubusercontent.com/40762111/76091723-73aa5d00-6001-11ea-83e6-45d6b573f343.gif" width="200">
 
+### Step 4. Chat View (Add and Read Data from Firebase, Design and UITableViewCell) 완성 및 Improve User Experience
+
+2020.03.10
+
+<img src = "https://user-images.githubusercontent.com/40762111/76343571-a6c35800-6343-11ea-8f1b-8c098275a831.gif" width = 370>
+
+
+
 ## 주요 기능
+
+- 회원 가입
+- 로그인 및 로그아웃
+- 다른 두 계정의 메세지 주고 받기
 
 ## 사용한 기술
 
-- AutoLayout, Cocoapods, Firebase(user authentication, registration, sign in and out), UIAlertController, UITableViewDataSource, UITableViewDelegate
+- AutoLayout, Cocoapods, Swift Package Manager, Firebase(user authentication, registration, sign in and out, database), Navigation Controller, UIAlertController, UITableViewDataSource, UITableViewDelegate, Custom View using .xib files
 
 ## 사용한 라이브러리
 
 - [CLTypingLabel](https://github.com/cl7/CLTypingLabel) : Initial screen에서 타이틀에 애니메이션 효과
 - [Firebase](https://firebase.google.com/docs/ios/setup?authuser=0): 회원 가입, 사용자 인증, 로그 아웃
+- [IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager): 키보드창 관련
 
 ## 배운 점
 
@@ -45,7 +58,7 @@ Documentation을 보니 `Left`와 `Right`보다 `Leading`과 `Trailing`을 사�
 
 > Interpreting Values - https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html#//apple_ref/doc/uid/TP40010853-CH9-SW1
 
-
+----
 
 ### localizedDescription
 
@@ -53,7 +66,7 @@ Error를 출력할 때, 뒤에 `.localizedDescription`을 붙이면 error에 대
 
 > localizedDescription - https://developer.apple.com/documentation/uikit/uidocumentbrowsererror/2920006-localizeddescription
 
-
+----
 
 ### UITableViewDataSource
 
@@ -86,13 +99,31 @@ Step3.에서 `message.count`가 3이므로 `cellForRowAt` 3번 실행
 >
 > `dequeueReusableCell(withIdentifier:for:)` reference - https://zeddios.tistory.com/55
 
+----
 
-
-### Closure
+### Closure 안에 self 쓰는 이유
 
 ### UITableViewDelegate - didSelectRowAt
 
 나중에 메세지 많이 해놓고 오픈 소스 사용해보기 그 nsoojin님?
+
+dequeueReusableCell
+
+
+
+3.10
+
+tableView.regist(UINib(nibName:, bundle:))
+
+awakeFromNib
+
+as? as! Is Any
+
+DispatchQueue.mian.async
+
+tableView.scrollToRow
+
+ViewWillDisappear, viewDidLoad 이런 거
 
 
 

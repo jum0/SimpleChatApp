@@ -15,9 +15,9 @@ struct K {
     
     struct BrandColors {
         static let purple = "BrandPurple"
-        static let lightPurple = "BrandLightPurple"
-        static let blue = "BrandBlue"
-        static let lighBlue = "BrandLightBlue"
+//        static let lightPurple = "BrandLightPurple"
+        static let pink = "BrandPink"
+        static let lighPink = "BrandLightPink"
     }
     
     struct FStore {
@@ -25,5 +25,10 @@ struct K {
         static let senderField = "sender"
         static let bodyField = "body"
         static let dateField = "date"
+    }
+    
+    struct Alert {
+        static let tryAgain = "Try Again"
+        static let ok = "OK"
     }
 }

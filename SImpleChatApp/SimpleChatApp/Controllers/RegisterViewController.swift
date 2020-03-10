@@ -24,8 +24,8 @@ class RegisterViewController: UIViewController {
             
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
-                    let alertController = UIAlertController(title: "Try again", message: e.localizedDescription, preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                    let alertController = UIAlertController(title: K.Alert.tryAgain, message: e.localizedDescription, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: K.Alert.ok, style: .default))
                     self.present(alertController, animated: true, completion: nil)
                     
                     print(e.localizedDescription)
@@ -35,9 +35,5 @@ class RegisterViewController: UIViewController {
                 }
             }
         }
-        
-        
     }
-    
-
-    }
+}
