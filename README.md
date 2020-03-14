@@ -83,7 +83,7 @@ Error를 출력할 때, 뒤에 `.localizedDescription`을 붙이면 error에 대
 - 테이블 뷰의 특정 위치에 삽입할 셀의 date source를 요청한다. (return 값 cell)
 - `dequeueReusableCell(withIdentifier:for:)`
   - 파라미터로 `withIdentifier`와 `for`가 있다.
-    - `for`에 `indexPath`가 들어가는데, 인덱스 패스의 설명을 보면 셀의 위치를 지정한다고 한다. 데이터 소스는 셀에 대한 요청이 있을 때, 정보를 받아 이것을 전달하고 이러한 방법은 인덱스 패스를 사용하여 테이블 뷰에서 셀의 위치를 기반으로 추가적인 구성 수행한다고 한다.
+    - `for`에 `indexPath`가 들어가는데, 인덱스 패스의 설명을 보면 셀의 위치를 지정한다고 한다. 데이터 소스는 셀에 대한 요청이 있을 때, 정보를 받아 이것을 전달하고 이러한 방법은 인덱스 패스를 사용하여 테이블 뷰에서 셀의 위치를 기반으로 추가적인 구성 수행한다.
   - 메모리를 절약하기 위해서 사용한다.
     - 테이블 뷰를 스크롤 할 때, 데이터 소스를 기반으로 셀의 내용이 바뀌게 되는데, 화면에 밖으로 밀려난 셀들은 reuse pool에 들어가게 되고 `dequeueReusableCell(withIdentifier:for:)`을 호출하면 테이블 셀에 의해서 다시 반환된다고 한다.
 
@@ -101,31 +101,85 @@ Step3.에서 `message.count`가 3이므로 `cellForRowAt` 3번 실행
 
 ----
 
-### Closure 안에 self 쓰는 이유
+### Closure
 
-### UITableViewDelegate - didSelectRowAt
+- 코드 블럭이면서 일급 객체
 
-나중에 메세지 많이 해놓고 오픈 소스 사용해보기 그 nsoojin님?
+  - 일급 객체란 전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달할 수 있으며, 함수의 반환 값도 될 수 있음.
 
-dequeueReusableCell
+- 기본 형태
 
+  ```swift
+  { (매개 변수들) -> 반환 타입 in
+      실행 코드
+  }
+  ```
 
+- 예시
 
-3.10
+  - 클로저로 변경
 
-tableView.regist(UINib(nibName:, bundle:))
+    ```swift
+    // 일반 함수 호출
+    func backwards(left: String, right: String) -> Bool {
+      return left > right
+    }
+    
+    let alphabet: [String] = ["c", "b", "a", "d"]
+    let reversed: [String] = alphabet.sorted(by: backwards) // ["d", "c", "b", "a"]
+    
+    
+    // 클로저로 변경
+    let reversed: [String]
+    reversed = alphabet.sorted(by: { (left: String, right: String) -> Bool in
+                                   return left > right}) // ["d", "c", "b", "a"]
+    ```
 
-awakeFromNib
+  - 후행 클로저
 
-as? as! Is Any
+    ```swift
+    // 후행 클로저(Trailing Closure) 사용
+    let reversed: [String] = alphabet.sorted() { (left: String, right: String) -> Bool in return left > right }
+    
+    // sorted(by:) 메서드의 소괄호 생략 가능
+    let reversed: [String] = alphabet.sorted { (left: String, right: String) -> Bool in return left > right }
+    ```
 
-DispatchQueue.mian.async
+  - 매개 변수 타입과 반환 타입 생략 가능
 
-tableView.scrollToRow
+    ```Swift
+    let reversed: [String] = alphabet.sorted { (left, right) in return left > right }
+    ```
 
-ViewWillDisappear, viewDidLoad 이런 거
+  - 축약된 전달 인자 이름 사용 및 return 키워드 생략 가능
+    ```swift
+    // 축약된 전달 인자 이름 사용
+    let reversed: [String] = alphabet.sorted { 
+      return $0 > $1
+    }
+    
+    // return 키워드 생략 가능
+    let reversed: [String] = alphabet.sorted { $0 > $1 }
+    ```
 
+> 참조 - https://academy.realm.io/kr/posts/closure-and-higher-order-functions-of-swift/
 
+----
+
+### UITableView에서 Scroll을 옮기기
+
+<img src="https://user-images.githubusercontent.com/40762111/76417230-dc1d8380-63df-11ea-98d9-c9234b5c9757.jpeg" width=150>
+
+```swift
+let indexPath = IndexPath(row: 4, section: 1)
+tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+```
+
+`IndexPath`에서 말하는 `row`와 `section`은 위의 사진과 같다. 
+
+이번 프로젝트와 같은 채팅창에서는 `IndexPath`의 `row`는 메세지가 저장되는 array의 `.count-1`을 하여 가장 마지막 메세지가 보이도록 한다. `section`은 따로 구분이 없으므로 0.
+
+`.scrollToRow`에서 `at: .bottom`의 해당 셀의 아래 부분이라는 뜻이다.
 
 
 

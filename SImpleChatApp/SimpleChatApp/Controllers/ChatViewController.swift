@@ -21,7 +21,6 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.delegate = self
         tableView.dataSource = self
         title = K.appName
         navigationItem.hidesBackButton = true
@@ -54,7 +53,7 @@ class ChatViewController: UIViewController {
                                 self.tableView.reloadData()
                                 // data load 되었을 때 마지막 메세지 보이도록 scroll
                                 let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                                self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
                             }
                         }
                     }
@@ -75,7 +74,7 @@ class ChatViewController: UIViewController {
                 if let e = error {
                     print("There was an issue saving data to firestore, \(e)")
                 } else {
-                    print("Successfully saved data.")
+//                    print("Successfully saved data.")
                     
                     DispatchQueue.main.async {
                         self.messageTextfield.text = ""
@@ -125,9 +124,3 @@ extension ChatViewController: UITableViewDataSource {
         return cell
     }
 }
-
-//extension ChatViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print(indexPath.row)
-//    }
-//}
