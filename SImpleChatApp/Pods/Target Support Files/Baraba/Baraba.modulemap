@@ -1,6 +1,0 @@
-framework module Baraba {
-  umbrella header "Baraba-umbrella.h"
-
-  export *
-  module * { export * }
-}
