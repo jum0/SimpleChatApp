@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BDC930A8D0706DD498E80FE /* Pods_SimpleChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42B6744B46A5AF19FFEA765 /* Pods_SimpleChatApp.framework */; };
 		3F5BE5A924178359004F40C0 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BE5A724178359004F40C0 /* MessageCell.swift */; };
 		3F5BE5AA24178359004F40C0 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F5BE5A824178359004F40C0 /* MessageCell.xib */; };
-		3F5BE5AD2417CBBD004F40C0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5BE5AC2417CBBD004F40C0 /* IQKeyboardManagerSwift */; };
+		3F5BE5AD2417CBBD004F40C0 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5BE5AC2417CBBD004F40C0 /* SwiftPackageProductDependency */; };
 		3F6F4DC0240E207700E3BD8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F4DBF240E207700E3BD8E /* AppDelegate.swift */; };
 		3F6F4DC2240E207700E3BD8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F4DC1240E207700E3BD8E /* SceneDelegate.swift */; };
 		3F6F4DC7240E207700E3BD8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F4DC5240E207700E3BD8E /* Main.storyboard */; };
@@ -23,9 +22,11 @@
 		3F6F4DE1240F9BEE00E3BD8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F4DE0240F9BEE00E3BD8E /* GoogleService-Info.plist */; };
 		3F8EF7B224127D8400B52122 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8EF7B124127D8400B52122 /* Constants.swift */; };
 		3F8EF7B424127FB100B52122 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8EF7B324127FB100B52122 /* Message.swift */; };
+		8A818B81636BD74EE9050965 /* libPods-SimpleChatApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC3F6C6E8B363A59E30683B /* libPods-SimpleChatApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC3F6C6E8B363A59E30683B /* libPods-SimpleChatApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleChatApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5BE5A724178359004F40C0 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		3F5BE5A824178359004F40C0 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		3F6F4DBC240E207700E3BD8E /* SimpleChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +44,6 @@
 		3F8EF7B124127D8400B52122 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F8EF7B324127FB100B52122 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9D48A62BE9BED84659639781 /* Pods-SimpleChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.debug.xcconfig"; sourceTree = "<group>"; };
-		E42B6744B46A5AF19FFEA765 /* Pods_SimpleChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EFD2CF1CDD012F113DC24A /* Pods-SimpleChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,8 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BDC930A8D0706DD498E80FE /* Pods_SimpleChatApp.framework in Frameworks */,
-				3F5BE5AD2417CBBD004F40C0 /* IQKeyboardManagerSwift in Frameworks */,
+				3F5BE5AD2417CBBD004F40C0 /* BuildFile in Frameworks */,
+				8A818B81636BD74EE9050965 /* libPods-SimpleChatApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 		9F71189A091CD3C917ADA48E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E42B6744B46A5AF19FFEA765 /* Pods_SimpleChatApp.framework */,
+				0FC3F6C6E8B363A59E30683B /* libPods-SimpleChatApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 				3F6F4DB8240E207700E3BD8E /* Sources */,
 				3F6F4DB9240E207700E3BD8E /* Frameworks */,
 				3F6F4DBA240E207700E3BD8E /* Resources */,
-				8F1128BDAFA40A189A2DCDEE /* [CP] Embed Pods Frameworks */,
+				A4D9D973FAAF277894FA8C6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,7 +160,7 @@
 			);
 			name = SimpleChatApp;
 			packageProductDependencies = (
-				3F5BE5AC2417CBBD004F40C0 /* IQKeyboardManagerSwift */,
+				3F5BE5AC2417CBBD004F40C0 /* SwiftPackageProductDependency */,
 			);
 			productName = SImpleChatApp;
 			productReference = 3F6F4DBC240E207700E3BD8E /* SimpleChatApp.app */;
@@ -191,7 +191,7 @@
 			);
 			mainGroup = 3F6F4DB3240E207700E3BD8E;
 			packageReferences = (
-				3F5BE5AB2417CBBD004F40C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				3F5BE5AB2417CBBD004F40C0 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 3F6F4DBD240E207700E3BD8E /* Products */;
 			projectDirPath = "";
@@ -240,21 +240,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F1128BDAFA40A189A2DCDEE /* [CP] Embed Pods Frameworks */ = {
+		A4D9D973FAAF277894FA8C6E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -478,7 +478,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3F5BE5AB2417CBBD004F40C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		3F5BE5AB2417CBBD004F40C0 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
 			requirement = {
@@ -489,9 +489,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3F5BE5AC2417CBBD004F40C0 /* IQKeyboardManagerSwift */ = {
+		3F5BE5AC2417CBBD004F40C0 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3F5BE5AB2417CBBD004F40C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 3F5BE5AB2417CBBD004F40C0 /* RemoteSwiftPackageReference */;
 			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
