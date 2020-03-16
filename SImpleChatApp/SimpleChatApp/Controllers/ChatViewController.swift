@@ -8,15 +8,18 @@
 
 import UIKit
 import Firebase
+import Baraba // baraba
 
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
+    @IBOutlet weak var barabaButton: UIBarButtonItem! // baraba
     
     let db = Firestore.firestore()
     
     var messages: [Message] = []
+    private var baraba: Baraba? // baraba
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,12 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
         title = K.appName
         navigationItem.hidesBackButton = true
+        barabaButton?.title = "Pause" // baraba
+        
+        baraba = Baraba(configuration: .automatic) // baraba
+        baraba?.scrollView = tableView // baraba
+        baraba?.delegate = self // baraba
+        baraba?.resume() // baraba
         
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         
@@ -61,6 +70,18 @@ class ChatViewController: UIViewController {
             }
         }
     }
+    
+    // baraba
+    @IBAction func barabaButtonPressed(_ sender: UIBarButtonItem) {
+        if baraba?.isActive == true {
+            sender.title = "Enable"
+            baraba?.pause()
+        } else {
+            sender.title = "Pause"
+            baraba?.resume()
+        }
+    }
+    
     
     @IBAction func sendPressed(_ sender: Any) {
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
@@ -122,5 +143,27 @@ extension ChatViewController: UITableViewDataSource {
         
         
         return cell
+    }
+}
+
+// baraba
+extension ChatViewController: BarabaDelegate {
+    func barabaDidStartScrolling(_ baraba: Baraba) {
+        // do something
+    }
+    
+    func barabaDidStopScrolling(_ baraba: Baraba) {
+        // do something
+    }
+    
+    func baraba(_ baraba: Baraba, didFailWithError error: Error) {
+        switch error {
+        case BarabaError.cameraUnauthorized:
+            ()
+        case BarabaError.unsupportedConfiguration:
+            ()
+        default:
+            ()
+        }
     }
 }

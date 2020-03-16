@@ -45,6 +45,7 @@
 - [CLTypingLabel](https://github.com/cl7/CLTypingLabel) : Initial screen에서 타이틀에 애니메이션 효과
 - [Firebase](https://firebase.google.com/docs/ios/setup?authuser=0): 회원 가입, 사용자 인증, 로그 아웃
 - [IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager): 키보드창 관련
+- [Baraba](https://github.com/nsoojin/baraba): ChatView에서 얼굴 인식을 통한 화면 scroll
 
 ## 배운 점
 

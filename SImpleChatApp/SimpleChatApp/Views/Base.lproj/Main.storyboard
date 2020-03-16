@@ -11,6 +11,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="SimpleChatApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
@@ -63,7 +64,6 @@
                         <outlet property="titleLabel" destination="mWV-mm-kRG" id="T2u-2g-oYZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="248" y="288"/>
         </scene>
@@ -319,6 +319,11 @@
                         <viewLayoutGuide key="safeArea" id="ga3-FA-aHA"/>
                     </view>
                     <navigationItem key="navigationItem" id="I65-78-axE">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="glM-4A-dbv">
+                            <connections>
+                                <action selector="barabaButtonPressed:" destination="K0t-ph-e18" id="KJG-38-AA6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="Qwg-7e-b2N">
                             <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -327,6 +332,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="barabaButton" destination="glM-4A-dbv" id="dv1-HI-R8J"/>
                         <outlet property="messageTextfield" destination="j2L-ab-H7e" id="93a-9V-dfa"/>
                         <outlet property="tableView" destination="CiG-QG-I87" id="UZv-og-9gF"/>
                     </connections>
@@ -338,6 +344,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xso-XA-WRO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ki7-1h-I9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3in-MG-j0q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="QMf-Rn-9gc">
@@ -354,7 +361,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2m2-be-AXE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ki7-1h-I9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-719" y="288"/>
         </scene>
